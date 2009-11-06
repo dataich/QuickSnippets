@@ -12,6 +12,7 @@
 static NSString *const kQuickSnippetsBundleIdentifier = @"com.dataich.QuickSnippets";
 static NSString *const kQuickSnippetsUrlScheme = @"quicksnippets://Snippet";
 static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSnippets";
+static NSString *const kQuickSnippetsPlist = @"QuickSnippets.plist";
 
 @interface QuickSnippetsSource : HGSCallbackSearchSource
 @end
@@ -23,8 +24,10 @@ static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSni
 }
 
 - (void)performSearchOperation:(HGSCallbackSearchOperation*)operation {
-  NSBundle *bundle = HGSGetPluginBundle();
-  NSString *path = [bundle pathForResource:@"Snippets" ofType:@"plist"];
+  id<HGSDelegate> delegate = [[HGSPluginLoader sharedPluginLoader] delegate];
+  NSString *path = [[delegate userApplicationSupportFolderForApp]
+                    stringByAppendingPathComponent:kQuickSnippetsPlist];
+  HGSLogDebug(@"%@", path);
 
   if(path) {
     NSArray *snippets = [NSArray arrayWithContentsOfFile:path];
@@ -33,6 +36,7 @@ static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSni
     NSString *rawQueryString = [query rawQueryString];
     NSMutableArray *results = [NSMutableArray array];
     
+    NSBundle *bundle = HGSGetPluginBundle();
     NSString *iconPath = [bundle pathForResource:@"QuickSnippets" ofType:@"png"];
     NSImage *icon = [[NSImage alloc] initByReferencingFile:iconPath];
     

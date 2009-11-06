@@ -21,7 +21,7 @@
     CGEventSourceRef eventSourceRef = CGEventSourceCreate(kCGEventSourceStateCombinedSessionState);
 
     if (!eventSourceRef) {
-      NSLog(@"cannot get CGEventSourceRef");
+      HGSLog(@"cannot get CGEventSourceRef");
       success = NO;
     } else {
       NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
