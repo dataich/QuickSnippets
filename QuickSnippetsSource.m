@@ -48,7 +48,7 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
         
         NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                     name, kHGSObjectAttributeNameKey,
-                                    kHGSTypeOnebox, kHGSObjectAttributeTypeKey,
+                                    HGS_SUBTYPE(kHGSTypeText, @"quicksnippets"), kHGSObjectAttributeTypeKey,
                                     kQuickSnippetsUrlSchemePaste, kHGSObjectAttributeURIKey,
                                     icon, kHGSObjectAttributeIconKey,
                                     nil];
