@@ -12,3 +12,5 @@
   #import <Vermilion/Vermilion.h>
   #import <GTM/GTMDefines.h>
 #endif
+
+#define kQuickSnippetsPlist @"QuickSnippets.plist"

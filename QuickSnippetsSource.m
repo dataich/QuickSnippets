@@ -10,9 +10,10 @@
 #import <GTM/GTMNSString+URLArguments.h>
 
 static NSString *const kQuickSnippetsBundleIdentifier = @"com.dataich.QuickSnippets";
-static NSString *const kQuickSnippetsUrlScheme = @"quicksnippets://Snippet";
-static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSnippets";
-static NSString *const kQuickSnippetsPlist = @"QuickSnippets.plist";
+static NSString *const kQuickSnippetsUrlSchemePaste = @"quicksnippets://Snippet/Paste";
+static NSString *const kQuickSnippetsUrlSchemeRegist = @"quicksnippets://Snippet/Regist";
+static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSnippets.Paste";
+static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSnippets.Regist";
 
 @interface QuickSnippetsSource : HGSCallbackSearchSource
 @end
@@ -48,7 +49,7 @@ static NSString *const kQuickSnippetsPlist = @"QuickSnippets.plist";
         NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                     name, kHGSObjectAttributeNameKey,
                                     kHGSTypeOnebox, kHGSObjectAttributeTypeKey,
-                                    kQuickSnippetsUrlScheme, kHGSObjectAttributeURIKey,
+                                    kQuickSnippetsUrlSchemePaste, kHGSObjectAttributeURIKey,
                                     icon, kHGSObjectAttributeIconKey,
                                     nil];
 
@@ -63,14 +64,25 @@ static NSString *const kQuickSnippetsPlist = @"QuickSnippets.plist";
       }
     }
     
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       rawQueryString, kHGSObjectAttributeNameKey,
+                                       HGS_SUBTYPE(kHGSTypeAction, @"quicksnippets"), kHGSObjectAttributeTypeKey,
+                                       kQuickSnippetsUrlSchemeRegist, kHGSObjectAttributeURIKey,
+                                       icon, kHGSObjectAttributeIconKey,
+                                       nil];
+    
+    HGSAction *action = [[HGSExtensionPoint actionsPoint]
+                         extensionWithIdentifier:kQuickSnippetsRegistAction];
+    if (action) {
+      [dictionary setObject:action forKey:kHGSObjectAttributeDefaultActionKey];
+    }
+    
+    HGSResult *result = [HGSResult resultWithDictionary:dictionary source:self];
+    [results addObject:result];
+    
+    
     [operation setResults:results];
   }
-
-  [operation finishQuery];
-}
-
-- (BOOL)isSearchConcurrent {
-  return YES;
 }
 
 @end

@@ -22,6 +22,22 @@
 	<array>
 		<dict>
 			<key>HGSExtensionClass</key>
+			<string>QuickSnippetsRegist</string>
+			<key>HGSExtensionPoint</key>
+			<string>HGSActionsExtensionPoint</string>
+			<key>HGSExtensionIdentifier</key>
+			<string>com.dataich.action.QuickSnippets.Regist</string>
+			<key>HGSActionDirectObjectTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>HGSExtensionUserVisibleName</key>
+			<string>QuickSnippets Regist</string>
+			<key>HGSExtensionIconImagePath</key>
+			<string>QuickSnippets.png</string>
+		</dict>
+		<dict>
+			<key>HGSExtensionClass</key>
 			<string>QuickSnippetsSource</string>
 			<key>HGSExtensionIdentifier</key>
 			<string>com.dataich.source.QuickSnippets</string>
@@ -38,7 +54,7 @@
 			<key>HGSExtensionPoint</key>
 			<string>HGSActionsExtensionPoint</string>
 			<key>HGSExtensionIdentifier</key>
-			<string>com.dataich.action.QuickSnippets</string>
+			<string>com.dataich.action.QuickSnippets.Paste</string>
 			<key>HGSActionDirectObjectTypes</key>
 			<array>
 				<string>*</string>
