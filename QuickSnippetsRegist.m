@@ -35,7 +35,8 @@
       
       NSMutableArray *snippets = [NSMutableArray arrayWithContentsOfFile:path];
       [snippets addObject:[NSArray arrayWithObjects:key, value, nil]];
-      [snippets writeToFile:path atomically:YES];
+      
+      [[NSArray arrayWithArray:snippets] writeToFile:path atomically:YES];
       
       success = YES;
     }
