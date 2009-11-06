@@ -1,0 +1,15 @@
+//
+//  QuickSnippets_Prefix.pch
+//  QuickSnippets
+//
+//  Created by Taichiro Yoshida on 09/11/05.
+//  Copyright LANCARD.COM inc. 2009. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+  #import <Vermilion/Vermilion.h>
+  #import <GTM/GTMDefines.h>
+  #import "DataichUtility.h"
+#endif

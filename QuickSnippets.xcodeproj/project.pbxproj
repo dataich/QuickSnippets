@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F38DD3B0F68694B0051B7E3 /* Vermilion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */; };
+		7F38DE690F688CC20051B7E3 /* GTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F38DE680F688CC20051B7E3 /* GTM.framework */; };
+		7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F80FC710F696C5B00228142 /* Cocoa.framework */; };
+		8B0D217E0F796E1C00FD4A12 /* HGSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */; };
+		945A069E10A2C24E00BDA53B /* Snippets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 945A069D10A2C24E00BDA53B /* Snippets.plist */; };
+		945A270210A3EC380027BEF6 /* QuickSnippetsPaste.m in Sources */ = {isa = PBXBuildFile; fileRef = 945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */; };
+		9478555C10A2B3DB0055FB2A /* QuickSnippetsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */; };
+		94FAADD010A414BF008D8653 /* Draft.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAADCE10A414BF008D8653 /* Draft.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F38DCE90F6865290051B7E3 /* QuickSnippets_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSnippets_Prefix.pch; sourceTree = "<group>"; };
+		7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Vermilion.framework; sourceTree = QSBBUILDROOT; };
+		7F38DE680F688CC20051B7E3 /* GTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTM.framework; sourceTree = QSBBUILDROOT; };
+		7F80FC710F696C5B00228142 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBDebug.xcconfig; path = QSB/xcconfig/QSBDebug.xcconfig; sourceTree = QSBSRCROOT; };
+		7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBRelease.xcconfig; path = QSB/xcconfig/QSBRelease.xcconfig; sourceTree = QSBSRCROOT; };
+		8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGSBundle.m; path = ../Vermilion/Vermilion/HGSBundle.m; sourceTree = QSBSRCROOT; };
+		8B0D21FB0F7970DE00FD4A12 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = LoadableBundle.xcconfig; path = "externals/google-toolbox-for-mac/XcodeConfig/Target/LoadableBundle.xcconfig"; sourceTree = QSBSRCROOT; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		945A069D10A2C24E00BDA53B /* Snippets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Snippets.plist; sourceTree = "<group>"; };
+		945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSnippetsPaste.m; sourceTree = "<group>"; };
+		9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSnippetsSource.m; sourceTree = "<group>"; };
+		94C4C32410A3B57600729758 /* QuickSnippets.hgs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickSnippets.hgs; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FAADCE10A414BF008D8653 /* Draft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Draft.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F38DD3B0F68694B0051B7E3 /* Vermilion.framework in Frameworks */,
+				7F38DE690F688CC20051B7E3 /* GTM.framework in Frameworks */,
+				7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* QuickSnippets */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D21FB0F7970DE00FD4A12 /* README.txt */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = QuickSnippets;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				945A069D10A2C24E00BDA53B /* Snippets.plist */,
+				94FAADCD10A414BF008D8653 /* Icons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */,
+				945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F80FC710F696C5B00228142 /* Cocoa.framework */,
+				7F38DE680F688CC20051B7E3 /* GTM.framework */,
+				7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94C4C32410A3B57600729758 /* QuickSnippets.hgs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */,
+				7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */,
+				7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */,
+				8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */,
+				7F38DCE90F6865290051B7E3 /* QuickSnippets_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		94FAADCD10A414BF008D8653 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				94FAADCE10A414BF008D8653 /* Draft.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* QuickSnippets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "QuickSnippets" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickSnippets;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = QuickSnippets;
+			productReference = 94C4C32410A3B57600729758 /* QuickSnippets.hgs */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "QuickSnippets" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* QuickSnippets */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* QuickSnippets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945A069E10A2C24E00BDA53B /* Snippets.plist in Resources */,
+				94FAADD010A414BF008D8653 /* Draft.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0D217E0F796E1C00FD4A12 /* HGSBundle.m in Sources */,
+				9478555C10A2B3DB0055FB2A /* QuickSnippetsSource.m in Sources */,
+				945A270210A3EC380027BEF6 /* QuickSnippetsPaste.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(QSBBUILDROOT)",
+				);
+				GCC_PREFIX_HEADER = QuickSnippets_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = QuickSnippets;
+				WRAPPER_EXTENSION = hgs;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(QSBBUILDROOT)",
+				);
+				GCC_PREFIX_HEADER = QuickSnippets_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = QuickSnippets;
+				WRAPPER_EXTENSION = hgs;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "QuickSnippets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "QuickSnippets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
