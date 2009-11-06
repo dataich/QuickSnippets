@@ -33,7 +33,7 @@ static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSni
     NSString *rawQueryString = [query rawQueryString];
     NSMutableArray *results = [NSMutableArray array];
     
-    NSString *iconPath = [bundle pathForResource:@"Draft" ofType:@"png"];
+    NSString *iconPath = [bundle pathForResource:@"QuickSnippets" ofType:@"png"];
     NSImage *icon = [[NSImage alloc] initByReferencingFile:iconPath];
     
     for(NSArray *snippet in snippets) {
