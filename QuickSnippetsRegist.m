@@ -34,9 +34,12 @@
       NSString *value = [name substringWithRange:remainingLineRange];
       
       NSMutableArray *snippets = [NSMutableArray arrayWithContentsOfFile:path];
-      [snippets addObject:[NSArray arrayWithObjects:key, value, nil]];
-      
-      [[NSArray arrayWithArray:snippets] writeToFile:path atomically:YES];
+      if([snippets count] == 0) {
+        snippets = [NSMutableArray array];
+      }
+      NSArray *snippet = [NSArray arrayWithObjects:key, value, nil];
+      [snippets addObject:snippet];
+      [snippets writeToFile:path atomically:YES];
       
       success = YES;
     }
