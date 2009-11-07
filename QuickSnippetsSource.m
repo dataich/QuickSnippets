@@ -38,7 +38,7 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
     NSMutableArray *results = [NSMutableArray array];
     
     NSBundle *bundle = HGSGetPluginBundle();
-    NSString *iconPath = [bundle pathForResource:@"QuickSnippets" ofType:@"png"];
+    NSString *iconPath = [bundle pathForResource:@"paste" ofType:@"png"];
     NSImage *icon = [[NSImage alloc] initByReferencingFile:iconPath];
     
     for(NSArray *snippet in snippets) {
@@ -68,6 +68,8 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
       }
     }
     
+    iconPath = [bundle pathForResource:@"regist" ofType:@"png"];
+    icon = [[NSImage alloc] initByReferencingFile:iconPath];
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        rawQueryString, kHGSObjectAttributeNameKey,
                                        HGS_SUBTYPE(kHGSTypeAction, @"quicksnippets"), kHGSObjectAttributeTypeKey,
