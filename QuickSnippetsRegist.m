@@ -3,7 +3,7 @@
 //  QuickSnippets
 //
 //  Created by Taichiro Yoshida on 09/11/06.
-//  Copyright LANCARD.COM inc. 2009. All rights reserved.
+//  Copyright Taichiro Yoshida 2009. All rights reserved.
 //
 
 #import <Vermilion/Vermilion.h>
