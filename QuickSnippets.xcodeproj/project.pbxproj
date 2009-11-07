@@ -17,6 +17,7 @@
 		9478555C10A2B3DB0055FB2A /* QuickSnippetsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */; };
 		94CBCFF810A5C2EC0072A7C2 /* paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CBCFF610A5C2EC0072A7C2 /* paste.png */; };
 		94CBCFF910A5C2EC0072A7C2 /* regist.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CBCFF710A5C2EC0072A7C2 /* regist.png */; };
+		94D1B80910A5C94E002B87B4 /* README.mb in Resources */ = {isa = PBXBuildFile; fileRef = 94D1B80810A5C94E002B87B4 /* README.mb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,6 @@
 		7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBDebug.xcconfig; path = QSB/xcconfig/QSBDebug.xcconfig; sourceTree = QSBSRCROOT; };
 		7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBRelease.xcconfig; path = QSB/xcconfig/QSBRelease.xcconfig; sourceTree = QSBSRCROOT; };
 		8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGSBundle.m; path = ../Vermilion/Vermilion/HGSBundle.m; sourceTree = QSBSRCROOT; };
-		8B0D21FB0F7970DE00FD4A12 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = LoadableBundle.xcconfig; path = "externals/google-toolbox-for-mac/XcodeConfig/Target/LoadableBundle.xcconfig"; sourceTree = QSBSRCROOT; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9447334B10A557700061549C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -37,6 +37,7 @@
 		94C4C32410A3B57600729758 /* QuickSnippets.hgs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickSnippets.hgs; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBCFF610A5C2EC0072A7C2 /* paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paste.png; sourceTree = "<group>"; };
 		94CBCFF710A5C2EC0072A7C2 /* regist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regist.png; sourceTree = "<group>"; };
+		94D1B80810A5C94E002B87B4 /* README.mb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +57,7 @@
 		089C166AFE841209C02AAC07 /* QuickSnippets */ = {
 			isa = PBXGroup;
 			children = (
-				8B0D21FB0F7970DE00FD4A12 /* README.txt */,
+				94D1B80810A5C94E002B87B4 /* README.mb */,
 				9447334B10A557700061549C /* LICENSE.txt */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
@@ -179,6 +180,7 @@
 				9447334C10A557700061549C /* LICENSE.txt in Resources */,
 				94CBCFF810A5C2EC0072A7C2 /* paste.png in Resources */,
 				94CBCFF910A5C2EC0072A7C2 /* regist.png in Resources */,
+				94D1B80910A5C94E002B87B4 /* README.mb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
