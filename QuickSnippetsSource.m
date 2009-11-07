@@ -42,16 +42,20 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
     NSImage *icon = [[NSImage alloc] initByReferencingFile:iconPath];
     
     for(NSArray *snippet in snippets) {
-      if (([[snippet objectAtIndex:0] rangeOfString:rawQueryString]).location != NSNotFound) {
+      if (([[snippet objectAtIndex:0] rangeOfString:rawQueryString]).location != NSNotFound ||
+          ([[snippet objectAtIndex:1] rangeOfString:rawQueryString]).location != NSNotFound) {
         NSString *name = (NSString*)[snippet objectAtIndex:1];
         HGSLogDebug(@"%@", name);
         
         NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                    name, kHGSObjectAttributeNameKey,
-                                    HGS_SUBTYPE(kHGSTypeText, @"quicksnippets"), kHGSObjectAttributeTypeKey,
-                                    kQuickSnippetsUrlSchemePaste, kHGSObjectAttributeURIKey,
-                                    icon, kHGSObjectAttributeIconKey,
-                                    nil];
+                                           name,
+                                           kHGSObjectAttributeNameKey,
+                                           kHGSTypeText, kHGSObjectAttributeTypeKey,
+                                           [NSString stringWithFormat:@"%@?%@", kQuickSnippetsUrlSchemePaste, name],
+                                           kHGSObjectAttributeURIKey,
+                                           icon,
+                                           kHGSObjectAttributeIconKey,
+                                           nil];
 
         HGSAction *action = [[HGSExtensionPoint actionsPoint]
                              extensionWithIdentifier:kQuickSnippetsPasteAction];
@@ -79,7 +83,6 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
     
     HGSResult *result = [HGSResult resultWithDictionary:dictionary source:self];
     [results addObject:result];
-    
     
     [operation setResults:results];
   }
