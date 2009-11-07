@@ -17,7 +17,7 @@
 		9478555C10A2B3DB0055FB2A /* QuickSnippetsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */; };
 		94CBCFF810A5C2EC0072A7C2 /* paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CBCFF610A5C2EC0072A7C2 /* paste.png */; };
 		94CBCFF910A5C2EC0072A7C2 /* regist.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CBCFF710A5C2EC0072A7C2 /* regist.png */; };
-		94D1B80910A5C94E002B87B4 /* README.mb in Resources */ = {isa = PBXBuildFile; fileRef = 94D1B80810A5C94E002B87B4 /* README.mb */; };
+		94D1B80D10A5CC80002B87B4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 94D1B80C10A5CC80002B87B4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		94C4C32410A3B57600729758 /* QuickSnippets.hgs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickSnippets.hgs; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBCFF610A5C2EC0072A7C2 /* paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paste.png; sourceTree = "<group>"; };
 		94CBCFF710A5C2EC0072A7C2 /* regist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regist.png; sourceTree = "<group>"; };
-		94D1B80810A5C94E002B87B4 /* README.mb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mb; sourceTree = "<group>"; };
+		94D1B80C10A5CC80002B87B4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		089C166AFE841209C02AAC07 /* QuickSnippets */ = {
 			isa = PBXGroup;
 			children = (
-				94D1B80810A5C94E002B87B4 /* README.mb */,
+				94D1B80C10A5CC80002B87B4 /* README.md */,
 				9447334B10A557700061549C /* LICENSE.txt */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
@@ -180,7 +180,7 @@
 				9447334C10A557700061549C /* LICENSE.txt in Resources */,
 				94CBCFF810A5C2EC0072A7C2 /* paste.png in Resources */,
 				94CBCFF910A5C2EC0072A7C2 /* regist.png in Resources */,
-				94D1B80910A5C94E002B87B4 /* README.mb in Resources */,
+				94D1B80D10A5CC80002B87B4 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

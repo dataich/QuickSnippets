@@ -2,10 +2,16 @@
 
 <h2>LICENSE</h2>
 
-The MIT License. See LICENSE.txt.
+<p>
+The MIT License. See LICENSE.txt.<br>
 This product contains some file not on me, see header.
+</p>
 
-This product also contains image files not on me.
-Thanks to following developer.
-http://harwen.net/
-http://www.iconfinder.net/
+<p>
+This product also contains image files not on me.<br>
+Thanks to following developer.<br>
+<ul>
+<li><a href="http://harwen.net/">http://harwen.net/</a></li>
+<li><a href="http://www.iconfinder.net/">http://www.iconfinder.net/</a></li>
+</ul>
+</p>
