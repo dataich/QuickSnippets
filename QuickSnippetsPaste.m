@@ -14,6 +14,7 @@
 @implementation  QuickSnippetsPaste
 
 - (BOOL)performWithInfo:(NSDictionary*)info {
+  HGSLogDebug(@"QuickSnippetsPaste:performWithInfo");
   HGSResultArray *directObjects = [info objectForKey:kHGSActionDirectObjectsKey];
   BOOL success = NO;
 
@@ -43,6 +44,14 @@
     }
   }
   return success;
+}
+
+- (BOOL)appliesToResult:(HGSResult *)result {
+  return NO;  
+}
+
+- (BOOL)appliesToResults:(HGSResultArray *)results {
+  return NO;
 }
 
 @end

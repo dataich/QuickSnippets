@@ -50,4 +50,12 @@
   return success;
 }
 
+- (BOOL)appliesToResult:(HGSResult *)result {
+  return NO;  
+}
+
+- (BOOL)appliesToResults:(HGSResultArray *)results {
+  return NO;
+}
+
 @end
