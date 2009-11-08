@@ -15,48 +15,40 @@ static NSString *const kQuickSnippetsUrlSchemeRegist = @"quicksnippets://Snippet
 static NSString *const kQuickSnippetsPasteAction = @"com.dataich.action.QuickSnippets.Paste";
 static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSnippets.Regist";
 
-@interface QuickSnippetsSource : HGSCallbackSearchSource
+@interface QuickSnippetsSource : HGSMemorySearchSource
 @end
 
 @implementation QuickSnippetsSource
 
-- (BOOL)isValidSourceForQuery:(HGSQuery *)query {
-  return YES;
-}
-
-- (void)performSearchOperation:(HGSCallbackSearchOperation*)operation {
-  id<HGSDelegate> delegate = [[HGSPluginLoader sharedPluginLoader] delegate];
-  NSString *path = [[delegate userApplicationSupportFolderForApp]
-                    stringByAppendingPathComponent:kQuickSnippetsPlist];
-  HGSLogDebug(@"%@", path);
-
-  if(path) {
-    NSArray *snippets = [NSArray arrayWithContentsOfFile:path];
-  
-    HGSQuery *query = [operation query];
-    NSString *rawQueryString = [query rawQueryString];
-    NSMutableArray *results = [NSMutableArray array];
+- (id)initWithConfiguration:(NSDictionary *)configuration {
+  if ((self = [super initWithConfiguration:configuration])) {
+    id<HGSDelegate> delegate = [[HGSPluginLoader sharedPluginLoader] delegate];
+    NSString *path = [[delegate userApplicationSupportFolderForApp]
+                      stringByAppendingPathComponent:kQuickSnippetsPlist];
+    HGSLogDebug(@"%@", path);
     
     NSBundle *bundle = HGSGetPluginBundle();
     NSString *iconPath = [bundle pathForResource:@"paste" ofType:@"png"];
     NSImage *icon = [[NSImage alloc] initByReferencingFile:iconPath];
     
-    for(NSArray *snippet in snippets) {
-      if (([[snippet objectAtIndex:0] rangeOfString:rawQueryString]).location != NSNotFound ||
-          ([[snippet objectAtIndex:1] rangeOfString:rawQueryString]).location != NSNotFound) {
+    if(path) {
+      NSArray *snippets = [NSArray arrayWithContentsOfFile:path];
+         
+      for(NSArray *snippet in snippets) {
+        NSString *key = (NSString*)[snippet objectAtIndex:0];
         NSString *name = (NSString*)[snippet objectAtIndex:1];
         HGSLogDebug(@"%@", name);
         
         NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                            name,
                                            kHGSObjectAttributeNameKey,
-                                           kHGSTypeText, kHGSObjectAttributeTypeKey,
+                                           HGS_SUBTYPE(kHGSTypeText, @"quicksnippets"), kHGSObjectAttributeTypeKey,
                                            [NSString stringWithFormat:@"%@?%@", kQuickSnippetsUrlSchemePaste, name],
                                            kHGSObjectAttributeURIKey,
                                            icon,
                                            kHGSObjectAttributeIconKey,
                                            nil];
-
+        
         HGSAction *action = [[HGSExtensionPoint actionsPoint]
                              extensionWithIdentifier:kQuickSnippetsPasteAction];
         if (action) {
@@ -64,15 +56,17 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
         }
         
         HGSResult *result = [HGSResult resultWithDictionary:dictionary source:self];
-        [results addObject:result];
+        [self indexResult:result
+                     name:key
+               otherTerms:nil];
       }
-    }
+    } 
     
     iconPath = [bundle pathForResource:@"regist" ofType:@"png"];
     icon = [[NSImage alloc] initByReferencingFile:iconPath];
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                       rawQueryString, kHGSObjectAttributeNameKey,
-                                       HGS_SUBTYPE(kHGSTypeAction, @"quicksnippets"), kHGSObjectAttributeTypeKey,
+                                       @"QuickSnippets Regist", kHGSObjectAttributeNameKey,
+                                       HGS_SUBTYPE(kHGSTypeOnebox, @"quicksnippets"), kHGSObjectAttributeTypeKey,
                                        kQuickSnippetsUrlSchemeRegist, kHGSObjectAttributeURIKey,
                                        icon, kHGSObjectAttributeIconKey,
                                        nil];
@@ -84,10 +78,19 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
     }
     
     HGSResult *result = [HGSResult resultWithDictionary:dictionary source:self];
-    [results addObject:result];
-    
-    [operation setResults:results];
+    [self indexResult:result
+                 name:@"QuickSnippets"
+           otherTerms:nil];
   }
+  return self;
+}
+
+- (NSMutableDictionary *)archiveRepresentationForResult:(HGSResult*)result {
+  return nil;
+}
+
+- (HGSResult *)resultWithArchivedRepresentation:(NSDictionary *)representation {
+  return nil;
 }
 
 @end

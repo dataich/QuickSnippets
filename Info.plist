@@ -22,6 +22,22 @@
 	<array>
 		<dict>
 			<key>HGSExtensionClass</key>
+			<string>QuickSnippetsPaste</string>
+			<key>HGSExtensionPoint</key>
+			<string>HGSActionsExtensionPoint</string>
+			<key>HGSExtensionIdentifier</key>
+			<string>com.dataich.action.QuickSnippets.Paste</string>
+			<key>HGSActionDirectObjectTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>HGSExtensionUserVisibleName</key>
+			<string>QuickSnippets Paste</string>
+			<key>HGSExtensionIconImagePath</key>
+			<string>QuickSnippets.png</string>
+		</dict>
+		<dict>
+			<key>HGSExtensionClass</key>
 			<string>QuickSnippetsRegist</string>
 			<key>HGSExtensionPoint</key>
 			<string>HGSActionsExtensionPoint</string>
@@ -45,24 +61,10 @@
 			<string>HGSSourcesExtensionPoint</string>
 			<key>HGSExtensionUserVisibleName</key>
 			<string>QuickSnippets Source</string>
+			<key>HGSExtensionIsEnabledByDefault</key>
+			<true/>
 			<key>HGSSearchSourcePivotableTypes</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>HGSExtensionClass</key>
-			<string>QuickSnippetsPaste</string>
-			<key>HGSExtensionPoint</key>
-			<string>HGSActionsExtensionPoint</string>
-			<key>HGSExtensionIdentifier</key>
-			<string>com.dataich.action.QuickSnippets.Paste</string>
-			<key>HGSActionDirectObjectTypes</key>
-			<array>
-				<string>*</string>
-			</array>
-			<key>HGSExtensionUserVisibleName</key>
-			<string>QuickSnippets Paste</string>
-			<key>HGSExtensionIconImagePath</key>
-			<string>QuickSnippets.png</string>
+			<string>text.quicksnippets</string>
 		</dict>
 	</array>
 </dict>
