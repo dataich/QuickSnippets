@@ -7,11 +7,8 @@
 //
 
 #import <Vermilion/Vermilion.h>
-#import <Vermilion/HGSAction.h>
-#import <AppKit/AppKit.h>
 
 @interface QuickSnippetsRegist : HGSAction {
-  NSTimer *_timer;
 }
 
 @end
