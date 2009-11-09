@@ -77,7 +77,7 @@ static NSString *const kQuickSnippetsRegistAction = @"com.dataich.action.QuickSn
   icon = [[NSImage alloc] initByReferencingFile:iconPath];
   NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      @"QuickSnippets Regist", kHGSObjectAttributeNameKey,
-                                     HGS_SUBTYPE(kHGSTypeOnebox, @"quicksnippets"), kHGSObjectAttributeTypeKey,
+                                     HGS_SUBTYPE(kHGSTypeAction, @"quicksnippets"), kHGSObjectAttributeTypeKey,
                                      kQuickSnippetsUrlSchemeRegist, kHGSObjectAttributeURIKey,
                                      icon, kHGSObjectAttributeIconKey,
                                      nil];
