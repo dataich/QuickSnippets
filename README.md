@@ -8,10 +8,8 @@ This product contains some file not on me, see header.
 </p>
 
 <p>
-This product also contains image files not on me.<br>
-Thanks to following developer.<br>
+A image file "QuickSnippets.png" is licensed by following company.
 <ul>
-<li><a href="http://harwen.net/">http://harwen.net/</a></li>
-<li><a href="http://www.iconfinder.net/">http://www.iconfinder.net/</a></li>
+<li><a href="http://www.oxygen-icons.org/">http://www.oxygen-icons.org/</a></li>
 </ul>
 </p>
