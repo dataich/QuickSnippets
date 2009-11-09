@@ -12,9 +12,7 @@
 
 - (void)awakeFromNib {
   [[self window] setLevel:NSFloatingWindowLevel];
-  [NSApp activateIgnoringOtherApps:YES];
-  [[self window] makeKeyAndOrderFront:nil];
-  
+  [[self window] center];
 }
 
 - (IBAction)cancel:(id)sender {
