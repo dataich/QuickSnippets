@@ -11,6 +11,9 @@
 		7F38DE690F688CC20051B7E3 /* GTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F38DE680F688CC20051B7E3 /* GTM.framework */; };
 		7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F80FC710F696C5B00228142 /* Cocoa.framework */; };
 		8B0D217E0F796E1C00FD4A12 /* HGSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */; };
+		9414584B10A7CDEE0050587F /* QuickSnippets.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414584A10A7CDEE0050587F /* QuickSnippets.xib */; };
+		9414584F10A7CE9B0050587F /* QuickSnippetsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9414584E10A7CE9B0050587F /* QuickSnippetsWindowController.m */; };
+		943248DF10A7E9020072E0CB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943248DE10A7E9020072E0CB /* AppKit.framework */; };
 		9447334C10A557700061549C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9447334B10A557700061549C /* LICENSE.txt */; };
 		945A270210A3EC380027BEF6 /* QuickSnippetsPaste.m in Sources */ = {isa = PBXBuildFile; fileRef = 945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */; };
 		947397A810A460C700F3F189 /* QuickSnippetsRegist.m in Sources */ = {isa = PBXBuildFile; fileRef = 947397A710A460C700F3F189 /* QuickSnippetsRegist.m */; };
@@ -30,6 +33,10 @@
 		8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGSBundle.m; path = ../Vermilion/Vermilion/HGSBundle.m; sourceTree = QSBSRCROOT; };
 		8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = LoadableBundle.xcconfig; path = "externals/google-toolbox-for-mac/XcodeConfig/Target/LoadableBundle.xcconfig"; sourceTree = QSBSRCROOT; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9414584A10A7CDEE0050587F /* QuickSnippets.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickSnippets.xib; sourceTree = "<group>"; };
+		9414584D10A7CE9B0050587F /* QuickSnippetsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSnippetsWindowController.h; sourceTree = "<group>"; };
+		9414584E10A7CE9B0050587F /* QuickSnippetsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSnippetsWindowController.m; sourceTree = "<group>"; };
+		943248DE10A7E9020072E0CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9447334B10A557700061549C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSnippetsPaste.m; sourceTree = "<group>"; };
 		947397A710A460C700F3F189 /* QuickSnippetsRegist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSnippetsRegist.m; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 				7F38DD3B0F68694B0051B7E3 /* Vermilion.framework in Frameworks */,
 				7F38DE690F688CC20051B7E3 /* GTM.framework in Frameworks */,
 				7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */,
+				943248DF10A7E9020072E0CB /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 			children = (
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				94CBCFF510A5C2EC0072A7C2 /* Icons */,
+				9414584A10A7CDEE0050587F /* QuickSnippets.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -91,6 +100,8 @@
 				945A270110A3EC380027BEF6 /* QuickSnippetsPaste.m */,
 				947397A710A460C700F3F189 /* QuickSnippetsRegist.m */,
 				9478555B10A2B3DB0055FB2A /* QuickSnippetsSource.m */,
+				9414584D10A7CE9B0050587F /* QuickSnippetsWindowController.h */,
+				9414584E10A7CE9B0050587F /* QuickSnippetsWindowController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -101,6 +112,7 @@
 				7F80FC710F696C5B00228142 /* Cocoa.framework */,
 				7F38DE680F688CC20051B7E3 /* GTM.framework */,
 				7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */,
+				943248DE10A7E9020072E0CB /* AppKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 				94CBCFF810A5C2EC0072A7C2 /* paste.png in Resources */,
 				94CBCFF910A5C2EC0072A7C2 /* regist.png in Resources */,
 				94D1B80D10A5CC80002B87B4 /* README.md in Resources */,
+				9414584B10A7CDEE0050587F /* QuickSnippets.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +208,7 @@
 				9478555C10A2B3DB0055FB2A /* QuickSnippetsSource.m in Sources */,
 				945A270210A3EC380027BEF6 /* QuickSnippetsPaste.m in Sources */,
 				947397A810A460C700F3F189 /* QuickSnippetsRegist.m in Sources */,
+				9414584F10A7CE9B0050587F /* QuickSnippetsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

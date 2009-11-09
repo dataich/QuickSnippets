@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>0.9</string>
+	<string>0.9.1</string>
 	<key>HGSPluginAPIVersion</key>
 	<string>${VERMILLION_PLUGIN_API_VERSION}</string>
 	<key>HGSExtensions</key>
