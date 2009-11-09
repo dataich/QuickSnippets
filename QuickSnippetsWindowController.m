@@ -11,7 +11,10 @@
 @implementation QuickSnippetsWindowController
 
 - (void)awakeFromNib {
-  [[self window] setLevel:NSFloatingWindowLevel];  
+  [[self window] setLevel:NSFloatingWindowLevel];
+  [NSApp activateIgnoringOtherApps:YES];
+  [[self window] makeKeyAndOrderFront:nil];
+  
 }
 
 - (IBAction)cancel:(id)sender {
