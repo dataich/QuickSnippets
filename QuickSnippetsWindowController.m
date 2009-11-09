@@ -10,6 +10,10 @@
 
 @implementation QuickSnippetsWindowController
 
+- (void)awakeFromNib {
+  [[self window] setLevel:NSFloatingWindowLevel];  
+}
+
 - (IBAction)cancel:(id)sender {
   [self close];
   [self release];
