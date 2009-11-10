@@ -19,11 +19,6 @@
   [[self window] center];
 }
 
-- (IBAction)cancel:(id)sender {
-  [self close];
-  [self release];
-}
-
 - (IBAction)regist:(id)sender {
   @try {
     id<HGSDelegate> delegate = [[HGSPluginLoader sharedPluginLoader] delegate];
@@ -47,7 +42,7 @@
     [snippets addObject:snippet];
     [snippets writeToFile:path atomically:YES];
 
-    [_label setStringValue:@"Registration succeed."];
+    [_label setStringValue:@"Registration is completed."];
   }
   @catch (NSException * e) {
     HGSLog(@"%@", [e description]);

@@ -13,7 +13,6 @@
   IBOutlet id _valueTextView;
 }
 
-- (IBAction)cancel:(id)sender;
 - (IBAction)regist:(id)sender;
 
 @end
