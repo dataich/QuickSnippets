@@ -11,7 +11,11 @@
 @implementation QuickSnippetsWindowController
 
 - (void)awakeFromNib {
-  [[self window] setLevel:NSFloatingWindowLevel];
+  [NSApp activateIgnoringOtherApps:YES];
+  NSWindow *theKeyWindow = [NSApp keyWindow];
+  NSInteger keyLevel = [theKeyWindow level];
+  [[self window] setLevel:keyLevel + 1];
+  [[self window] makeKeyAndOrderFront:self];
   [[self window] center];
 }
 
